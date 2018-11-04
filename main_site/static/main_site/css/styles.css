@@ -1,0 +1,52 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px;
+    /* Vertically center the text there */
+    background-color: #fff;
+    border-top: 2px solid #000;
+}
+
+body>.container {
+    padding: 60px 15px 0;
+}
+
+.footer>.container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+code {
+    font-size: 80%;
+}
+
+.navbar {
+    background-color: #fff;
+    border-bottom: 2px solid #000;
+}
+
+#social-icons {
+    display: inline;
+    float: right;
+}
+
+.messages {
+    background-color: palegreen;
+}

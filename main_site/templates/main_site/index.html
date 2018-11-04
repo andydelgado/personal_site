@@ -1,0 +1,37 @@
+{% extends 'main_site/base.html' %}
+{% block nav_item_home %}active{% endblock nav_item_home %}
+
+{% block content %}
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <main role="main" class="container">
+        <h1 class="mt-5">Hi, I'm Andy and I enjoy building things with Python.</h1><br />
+        <p class="lead">I learn fast, work hard and have a track record of delivering production quality solutions on time.</p>
+        <p class="lead">Simply put, I get things done.</p>
+        <br />
+        <h2>Tech Skills</h2>
+        <ul>
+            <li>
+                Languages: <strong>Python</strong>, Java, Javascript, HTML/CSS, Ruby
+            </li>
+            <li>
+                Frameworks/Libraries: <strong>Django</strong>, Flask, React, Redux, Rails
+            </li>
+        </ul>
+        <br />
+        <h2>Work Experience</h2>
+        <p class='lead'>Java Application Developer at Highmark Health Solutions</p>
+        <ul>
+            <li>Developed the "Care Cost Estimator" application that lets members get an estimate of the cost of potential medical procedures.</li>
+            <li>Developed the "Virtual ID Card" application allowing members to access and print/fax a copy of their insurance ID card through the member website.</li>
+            <li>Led a team of offshore developers in the development of an interal service using IBM's WebSphere Message Broker technology.</li>
+        </ul>
+        <br />
+        <br />
+    </main>
+{% endblock %}
