@@ -2,5 +2,35 @@
 {% block nav_item_blog %}active{% endblock nav_item_blog %}
 
 {% block content %}
-<h1>Blog</h1>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md">
+
+            <h1 class="my-4">Andy's Blog
+            </h1>
+{% for post in posts %}
+            <!-- Blog Post -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.title }}</h2>
+                    <p class="card-text">{{ post.text|truncatewords:50 }}</p>
+                    <a href="{% url 'post' pk=post.pk %}" class="btn btn-secondary">Read More &rarr;</a>
+                </div>
+                <div class="card-footer text-muted">
+                    Published: {{ post.published_date }}
+                </div>
+            </div>
+{% endfor %}
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
 {% endblock %}
