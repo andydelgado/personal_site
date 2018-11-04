@@ -1,1 +1,2 @@
-linguist-generated=false
+* linguist-vendored
+*.py linguist-vendored=false
